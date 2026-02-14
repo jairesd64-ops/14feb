@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>para amotito  ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.si {
+    background-color: white;
+    color: #ff4b5c;
+}
+
+.si:hover {
+    background-color: #ff4b5c;
+    color: white;
+}
+
+.no {
+    background-color: black;
+    color: white;
+    position: absolute;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <h1> ❤️14 de Febrero❤️</h1>
+    <h2>Quiero pasar este día contigo amotito</h2>
+    <p>Eres la persona más especial en mi vida mi amotito  ❤️</p>
+    <p>¿Quieres ser mi pincesa este 14 de febrero y siempre?</p>
+
+<button class="si" onclick="window.location.href='respuesta.html'">
+
+        mmmmmmm yo creo que si 😍
+    </button>
+
+    <button class="no" id="noBtn">
+        No, que le pasa, raro 😒
+    </button>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+function moverBoton() {
+    const ancho = window.innerWidth - 120;
+    const alto = window.innerHeight - 60;
+
+    const x = Math.random() * ancho;
+    const y = Math.random() * alto;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+// Para computadora
+noBtn.addEventListener("mouseover", moverBoton);
+
+// Para celular (cuando lo toquen)
+noBtn.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    moverBoton();
+});
+</script>
+
+</body>
+</html>
